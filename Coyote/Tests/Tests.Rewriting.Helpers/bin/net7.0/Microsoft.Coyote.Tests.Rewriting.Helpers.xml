@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Coyote.Tests.Rewriting.Helpers</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Coyote.Rewriting.Tests.Helpers.TaskAwaiter">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Rewriting.Tests.Helpers.GenericTaskAwaiter">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Rewriting.Tests.Helpers.TaskAwaiter`1">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+        </member>
+    </members>
+</doc>

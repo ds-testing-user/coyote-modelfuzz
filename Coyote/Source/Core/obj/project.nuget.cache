@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "o3VbyLrIVe3sToBSD+tr7s2a/pf4FaCuk1JOdkxPQmHPXd4mNsqG/ViEU9Ovmv5OOkkEh2RyWuKGzBIpr6RDDg==",
+  "success": true,
+  "projectFilePath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/csvhelper/30.0.1/csvhelper.30.0.1.nupkg.sha512",
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/microsoft.codeanalysis.fxcopanalyzers/2.9.2/microsoft.codeanalysis.fxcopanalyzers.2.9.2.nupkg.sha512",
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/microsoft.codeanalysis.versioncheckanalyzer/2.9.2/microsoft.codeanalysis.versioncheckanalyzer.2.9.2.nupkg.sha512",
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/microsoft.codequality.analyzers/2.9.2/microsoft.codequality.analyzers.2.9.2.nupkg.sha512",
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/microsoft.netcore.analyzers/2.9.2/microsoft.netcore.analyzers.2.9.2.nupkg.sha512",
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/microsoft.netframework.analyzers/2.9.2/microsoft.netframework.analyzers.2.9.2.nupkg.sha512",
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/stylecop.analyzers/1.1.118/stylecop.analyzers.1.1.118.nupkg.sha512",
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Iced</id>
+    <version>1.8.0</version>
+    <title>x86/x64 disassembler, assembler, instruction decoder</title>
+    <authors>0xd4d</authors>
+    <owners>0xd4d</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>logo.png</icon>
+    <projectUrl>https://github.com/0xd4d/iced</projectUrl>
+    <description>Iced is a high performance and correct x86 (16/32/64-bit) instruction decoder, disassembler and assembler written in C#.
+
+It can be used for static analysis of x86/x64 binaries, to rewrite code (eg. remove garbage instructions), to relocate code or as a disassembler.
+
+- ✔️Supports all Intel and AMD instructions
+- ✔️Correct: All instructions are tested and iced has been tested against other disassemblers/assemblers (xed, gas, objdump, masm, dumpbin, nasm, ndisasm) and fuzzed
+- ✔️100% C# code
+- ✔️The formatter supports masm, nasm, gas (AT&amp;T), Intel (XED) and there are many options to customize the output
+- ✔️The decoder is 2x+ faster than other similar libraries and doesn't allocate any memory
+- ✔️Small decoded instructions, only 32 bytes
+- ✔️High level Assembler providing a simple and lean syntax (e.g `asm.mov(eax, edx)`))
+- ✔️The encoder can be used to re-encode decoded instructions at any address
+- ✔️API to get instruction info, eg. read/written registers, memory and rflags bits; CPUID feature flag, flow control info, etc
+- ✔️Supports `.NET Standard 2.0/2.1+` and `.NET Framework 4.5+`
+- ✔️License: MIT</description>
+    <copyright>Copyright (C) 2018-2020 de4dot@gmail.com</copyright>
+    <tags>disassembler x86 x64 assembler encoder decoder formatter</tags>
+    <repository type="git" url="https://github.com/0xd4d/iced" commit="93c155a8a43270630fda73ea43d0e4df33210ffc" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework=".NETStandard2.1" />
+    </dependencies>
+  </metadata>
+</package>

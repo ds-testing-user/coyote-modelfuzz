@@ -1,0 +1,30 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Custom for Visual Studio
+*.cs      text diff=csharp
+*.csproj  text
+*.sln     eol=crlf
+
+# Standard to msysgit
+*.doc   diff=astextplain
+*.DOC   diff=astextplain
+*.docx  diff=astextplain
+*.DOCX  diff=astextplain
+*.dot   diff=astextplain
+*.DOT   diff=astextplain
+*.pdf   diff=astextplain
+*.PDF   diff=astextplain
+*.rtf   diff=astextplain
+*.RTF   diff=astextplain
+
+# Ignored paths for language reporting
+*.md linguist-vendored
+*.ps1 linguist-vendored
+*.psm1 linguist-vendored
+*.json linguist-vendored
+*.yml linguist-vendored
+*.ipynb linguist-vendored
+docs/* linguist-vendored
+Samples/* linguist-vendored
+Scripts/* linguist-vendored

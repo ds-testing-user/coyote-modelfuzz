@@ -1,0 +1,351 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Common/Tests.Common.csproj": {}
+  },
+  "projects": {
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Actors/Actors.csproj": {
+      "version": "1.7.3",
+      "restore": {
+        "projectUniqueName": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Actors/Actors.csproj",
+        "projectName": "Microsoft.Coyote.Actors",
+        "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Actors/Actors.csproj",
+        "packagesPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages",
+        "outputPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Actors/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/NuGet.Config",
+          "/Users/berkay/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj": {
+                "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj": {
+      "version": "1.7.3",
+      "restore": {
+        "projectUniqueName": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj",
+        "projectName": "Microsoft.Coyote.Core",
+        "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj",
+        "packagesPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages",
+        "outputPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/NuGet.Config",
+          "/Users/berkay/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/Test.csproj": {
+      "version": "1.7.3",
+      "restore": {
+        "projectUniqueName": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/Test.csproj",
+        "projectName": "Microsoft.Coyote.Test",
+        "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/Test.csproj",
+        "packagesPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages",
+        "outputPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/NuGet.Config",
+          "/Users/berkay/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Actors/Actors.csproj": {
+                "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Actors/Actors.csproj"
+              },
+              "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj": {
+                "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Core/Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "Microsoft.ApplicationInsights": {
+              "target": "Package",
+              "version": "[2.20.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "Microsoft.Extensions.DependencyModel": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.4, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Common/Tests.Common.csproj": {
+      "version": "1.7.3",
+      "restore": {
+        "projectUniqueName": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Common/Tests.Common.csproj",
+        "projectName": "Microsoft.Coyote.Tests.Common",
+        "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Common/Tests.Common.csproj",
+        "packagesPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/packages",
+        "outputPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Common/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/NuGet.Config",
+          "/Users/berkay/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/Test.csproj": {
+                "projectPath": "/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/Test.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

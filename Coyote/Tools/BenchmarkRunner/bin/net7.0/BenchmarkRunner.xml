@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BenchmarkRunner</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Coyote.Benchmarking.Line">
+            <summary>
+            Represents the line in the form: y = a + b.x where a is the offset and b is the slope of the line.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Benchmarking.Line.Offset">
+            <summary>
+            The y-offset of the line.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Benchmarking.Line.Slope">
+            <summary>
+            The slope of the line.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.Line.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Benchmarking.Line"/> struct.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.DataPoint">
+            <summary>
+            A simple x, y value for 2D math.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Benchmarking.DataPoint.X">
+            <summary>
+            The X value.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Benchmarking.DataPoint.Y">
+            <summary>
+            The Y value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.DataPoint.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Benchmarking.DataPoint"/> struct.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.MathHelpers">
+            <summary>
+            A set of helper methods that do math.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.Mean(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Return the Mean of the given numbers.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.StandardDeviation(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Return the standard deviation of the given values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.Trim(System.Collections.Generic.IEnumerable{System.Double},System.Double)">
+            <summary>
+            Trim values outside of +/- the given range from the mean.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.TrimHigh(System.Collections.Generic.IEnumerable{System.Double},System.Double)">
+            <summary>
+            Trim values outside mean + range.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.Variance(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Return the variance, sum of the difference between each value and the mean, squared.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.ToDataPoints(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Convert the list of doubles into a list of DataPoints.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.Covariance(System.Collections.Generic.IEnumerable{Microsoft.Coyote.Benchmarking.DataPoint})">
+            <summary>
+            Return the covariance in the given x,y values.
+            The sum of the difference between x and its mean times the difference between y and its mean.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.MathHelpers.LinearRegression(System.Collections.Generic.IEnumerable{Microsoft.Coyote.Benchmarking.DataPoint})">
+            <summary>
+            Compute the trend line through the given points, and return the line in the form:
+            y = a + b.x.
+            </summary>
+            <param name="pts">The data to analyze.</param>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.Program">
+            <summary>
+            The Coyote performance benchmark runner.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.Storage">
+            <summary>
+            Wrapper on the Cosmos DB table used to store the perf results.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.PerfEntity">
+            <summary>
+            Entity representing a test result.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.Id">
+            <summary>
+            The row id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.PartitionKey">
+            <summary>
+            The parition key for the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.MachineName">
+            <summary>
+            The computer name where the test was run.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.RuntimeVersion">
+            <summary>
+            The .NET runtime version used.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.CommitId">
+            <summary>
+            The git commit id of code being tested.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.Date">
+            <summary>
+            UTC date and time the test was run.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.TestName">
+            <summary>
+            The unique name of the test.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.Iteration">
+            <summary>
+            The test iteration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.Time">
+            <summary>
+            Time to complete the test in milliseconds.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.TimeStdDev">
+            <summary>
+            Standard deviation in the times.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.Memory">
+            <summary>
+            Process working set during the test.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.MemoryStdDev">
+            <summary>
+            Standard deviation in the memory numbers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.Cpu">
+            <summary>
+            Process total CPU usage during the test as a % of total number of cores.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.CpuStdDev">
+            <summary>
+            Standard deviation in the CPU numbers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfEntity.Comments">
+            <summary>
+            Additional notes about the test.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.PerfEntity.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Benchmarking.PerfEntity"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.PerfEntity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Benchmarking.PerfEntity"/> class.
+            Needed for retreival.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.PerfSummary">
+            <summary>
+            An entity representing the summary of all test iterations on a given test.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.Id">
+            <summary>
+            The row id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.PartitionKey">
+            <summary>
+            The parition key for the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.MachineName">
+            <summary>
+            The computer name where the test was run.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.RuntimeVersion">
+            <summary>
+            The .net runtime version used.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.CommitId">
+            <summary>
+            The git commit id of code being tested.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.Date">
+            <summary>
+            UTC date and time the test was run.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.TestName">
+            <summary>
+            The unique name of the test.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.TimeMean">
+            <summary>
+            The mean time in milliseconds.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.TimeStdDev">
+            <summary>
+            The standard deviation of the test times.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.TimeSlope">
+            <summary>
+            The slope of the linear regression of the test times.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.MemoryMean">
+            <summary>
+            The mean time in milliseconds.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.MemoryStdDev">
+            <summary>
+            The standard deviation of the memory usage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.MemorySlope">
+            <summary>
+            The slope of the linear regression of the memory usage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.CpuMean">
+            <summary>
+            The process cpu utilization as a percentage of total cores.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.CpuStdDev">
+            <summary>
+            The standard deviation of the cpu times.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.CpuSlope">
+            <summary>
+            The slope of the linear regression of the cpu utilization.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.PerfSummary.Comments">
+            <summary>
+            Additional notes about the test.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Benchmarking.PerfSummary.Data">
+            <summary>
+            The raw test iterations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.PerfSummary.#ctor(System.Collections.Generic.List{Microsoft.Coyote.Benchmarking.PerfEntity})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Benchmarking.PerfSummary"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Benchmarking.PerfSummary.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Benchmarking.PerfSummary"/> class.
+            Needed for retrieval.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.CommitHistoryEntity">
+            <summary>
+            Entity representing a commit id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.CommitHistoryEntity.Id">
+            <summary>
+            The row id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.CommitHistoryEntity.PartitionKey">
+            <summary>
+            The partition key for the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.CommitHistoryEntity.CommitId">
+            <summary>
+            The id of the commit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.CommitHistoryEntity.Date">
+            <summary>
+            The UTC commit date.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Benchmarking.CommitHistoryEntity.Author">
+            <summary>
+            The author of the commit.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Benchmarking.TotalMemoryDiagnoser">
+            <summary>
+            The BenchmarkDotNet MemoryDiagnoser does too much, costing about 20% perf hit.
+            This is a cheaper version that simply captures GC TotalMemory.
+            </summary>
+        </member>
+    </members>
+</doc>

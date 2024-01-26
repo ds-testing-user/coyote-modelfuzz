@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>coyote</name>
+    </assembly>
+    <members>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.Configuration">
+            <summary>
+            The Coyote runtime and testing configuration.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.RewritingOptions">
+            <summary>
+            The Coyote rewriting options.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.TestCommand">
+            <summary>
+            The test command.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.ReplayCommand">
+            <summary>
+            The replay command.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.RewriteCommand">
+            <summary>
+            The rewrite command.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.Arguments">
+            <summary>
+            Mao from argument names to arguments.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.Options">
+            <summary>
+            Mao from option names to options.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.CommandLineParser.Results">
+            <summary>
+            The parse results.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Cli.CommandLineParser.IsSuccessful">
+            <summary>
+            True if parsing was successful, else false.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Cli.CommandLineParser"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.InvokeCommand">
+            <summary>
+            Invokes the command selected by the user.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.SetTestCommandHandler(System.Func{Microsoft.Coyote.Configuration,Microsoft.Coyote.Cli.ExitCode})">
+            <summary>
+            Sets the handler to be invoked when the test command is selected by the user.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.SetReplayCommandHandler(System.Func{Microsoft.Coyote.Configuration,Microsoft.Coyote.Cli.ExitCode})">
+            <summary>
+            Sets the handler to be invoked when the replay command is selected by the user.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.SetRewriteCommandHandler(System.Func{Microsoft.Coyote.Configuration,Microsoft.Coyote.Rewriting.RewritingOptions,Microsoft.Coyote.Cli.ExitCode})">
+            <summary>
+            Sets the handler to be invoked when the rewrite command is selected by the user.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.CreateTestCommand(Microsoft.Coyote.Configuration)">
+            <summary>
+            Creates the test command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.CreateReplayCommand">
+            <summary>
+            Creates the replay command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.CreateRewriteCommand">
+            <summary>
+            Creates the rewrite command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.AddArgument(System.CommandLine.Command,System.CommandLine.Argument)">
+            <summary>
+            Adds an argument to the specified command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.AddGlobalOption(System.CommandLine.Command,System.CommandLine.Option)">
+            <summary>
+            Adds a global option to the specified command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.AddOption(System.CommandLine.Command,System.CommandLine.Option)">
+            <summary>
+            Adds an option to the specified command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.ValidateArgumentValueIsExpectedFile(System.CommandLine.Parsing.ArgumentResult,System.String[])">
+            <summary>
+            Validates that the specified argument result is found and has an expected file extension.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.ValidateOptionValueIsUnsignedInteger(System.CommandLine.Parsing.OptionResult)">
+            <summary>
+            Validates that the specified option result is an unsigned integer.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.ValidateOptionValueIsAllowed(System.CommandLine.Parsing.OptionResult,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Validates that the specified option result has an allowed value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.ValidatePrerequisiteOptionValueIsAvailable(System.CommandLine.Parsing.OptionResult,System.CommandLine.Option)">
+            <summary>
+            Validates that the specified prerequisite option is available.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.ValidateExclusiveOptionValueIsAvailable(System.CommandLine.Parsing.OptionResult,System.CommandLine.Option)">
+            <summary>
+            Validates that the specified exclusive option is available.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.UpdateConfigurations(System.CommandLine.Parsing.ParseResult)">
+            <summary>
+            Populates the configurations from the specified parse result.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.UpdateConfigurationsWithParsedArgument(System.CommandLine.Command,System.CommandLine.Parsing.ArgumentResult)">
+            <summary>
+            Updates the configuration with the specified parsed argument.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.UpdateConfigurationsWithParsedOption(System.CommandLine.Parsing.OptionResult)">
+            <summary>
+            Updates the configuration with the specified parsed option.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.IsHelpRequested(System.CommandLine.Parsing.ParseResult)">
+            <summary>
+            Returns true if the user is asking for help.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.PrintDetailedCoyoteVersion">
+            <summary>
+            Prints the detailed Coyote version.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.CommandLineParser.GetDotNetVersion">
+            <summary>
+            Returns the current .NET version.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Cli.ExitCode">
+            <summary>
+            The exit code returned by the tool.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.ExitCode.Success">
+            <summary>
+            Indicates that the tool terminated successfully.
+            </summary>
+            <remarks>
+            If the tool run in test mode, it also indicates that no bugs were found.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.ExitCode.Error">
+            <summary>
+            Indicates that the tool terminated with an error.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.ExitCode.BugFound">
+            <summary>
+            Indicates that a bug was found during testing.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Cli.ExitCode.InternalError">
+            <summary>
+            Indicates that the tool terminated with an internal error.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Cli.OutputFileManager">
+            <summary>
+            The manager for output files.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.OutputFileManager.CreateOutputDirectory(Microsoft.Coyote.Configuration)">
+            <summary>
+            Creates the output directory at either the user-specified <see cref="F:Microsoft.Coyote.Configuration.OutputFilePath"/>
+            or at the same directory as the <see cref="F:Microsoft.Coyote.Configuration.AssemblyToBeAnalyzed"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Cli.OutputFileManager.GetResolvedFileName(System.String,System.String)">
+            <summary>
+            Returns the filename with the next available index appended to it.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Program">
+            <summary>
+            The entry point to the Coyote tool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Program.RunTest(Microsoft.Coyote.Configuration)">
+            <summary>
+            Runs the test specified in the configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Program.ReplayTest(Microsoft.Coyote.Configuration)">
+            <summary>
+            Replays an execution that is specified in the configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Program.RewriteAssemblies(Microsoft.Coyote.Configuration,Microsoft.Coyote.Rewriting.RewritingOptions)">
+            <summary>
+            Rewrites the assemblies specified in the configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Program.LoadAssemblyConfiguration(System.String,Microsoft.Coyote.Logging.LogWriter)">
+            <summary>
+            Loads the configuration of the specified assembly.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Program.OnUnhandledException(System.Object,System.UnhandledExceptionEventArgs)">
+            <summary>
+            Callback invoked when an unhandled exception occurs.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Coyote.Tests.Rewriting</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Coyote.Rewriting.Tests.Exceptions.TaskExceptionFilterTests">
+            <summary>
+            Tests that we can insert an <see cref="T:System.Threading.ThreadInterruptedException"/> filter.
+            </summary>
+        </member>
+    </members>
+</doc>

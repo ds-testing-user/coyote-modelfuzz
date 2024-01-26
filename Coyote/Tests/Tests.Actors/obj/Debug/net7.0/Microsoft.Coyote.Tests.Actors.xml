@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Coyote.Tests.Actors</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Coyote.Actors.Tests.EventQueueStressTests">
+            <summary>
+            Stresses the thread safety of the event queue on an Actor.
+            This is a Production-only test.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.EventQueueTests">
+            <summary>
+            Tests internal low level EventQueue implementation.
+            This is a Production-only test.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnCreateActor(Microsoft.Coyote.Actors.ActorId,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnCreateStateMachine(Microsoft.Coyote.Actors.ActorId,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnEnqueueEvent(Microsoft.Coyote.Actors.ActorId,Microsoft.Coyote.Actors.Event)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnDequeueEvent(Microsoft.Coyote.Actors.ActorId,System.String,Microsoft.Coyote.Actors.Event)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnSendEvent(Microsoft.Coyote.Actors.ActorId,System.String,System.String,System.String,Microsoft.Coyote.Actors.Event,System.Guid,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnGotoState(Microsoft.Coyote.Actors.ActorId,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnStateTransition(Microsoft.Coyote.Actors.ActorId,System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnExecuteAction(Microsoft.Coyote.Actors.ActorId,System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnCreateMonitor(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnMonitorExecuteAction(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnMonitorProcessEvent(System.String,System.String,System.String,System.String,System.String,Microsoft.Coyote.Specifications.Monitor.Event)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnMonitorRaiseEvent(System.String,System.String,Microsoft.Coyote.Specifications.Monitor.Event)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.Tests.Logging.CustomActorRuntimeLogTextFormatter.OnMonitorStateTransition(System.String,System.String,System.Boolean,System.Nullable{System.Boolean})">
+            <inheritdoc/>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.ClassHandlerTests">
+            <summary>
+            Tests that StateMachines can also fall back on class level OnEventDoActions that
+            all Actors can define.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.PushPopStateTests.M5">
+            <summary>
+            Test that Defer, Ignore and DoAction can be inherited.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.PushPopStateTests.M6">
+            <summary>
+            Test you cannot have duplicated handlers for the same event.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.PushPopStateTests.M7">
+            <summary>
+            Test you cannot have duplicated handlers for the same event.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.PushPopStateTests.BaseState">
+            <summary>
+            Test if you have duplicate handlers for the same event on inherited State class then the
+            most derrived handler wins.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M1">
+            <summary>
+            This class tests that a state can inherit actions from an abstract base class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M2">
+            <summary>
+            Test that you can't declare more than one start states using inheritance.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M3">
+            <summary>
+            Test that OnEntry attribute can be inherited.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M4">
+            <summary>
+            Test that you can override OnEntry in a subclass of a State.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M5">
+            <summary>
+            Test you can inheriting OnEventDoAction.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M6">
+            <summary>
+            Test you can overriding OnEventDoAction in a state subclass.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M7">
+            <summary>
+            Test you can override OnEventDoAction inherited from 2 base classes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M8">
+            <summary>
+            Test that a base state can override OnEventDoAction.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M9">
+            <summary>
+            Test inheritance of OnEventGotoState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M10">
+            <summary>
+            Test overriding of OnEventGotoState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M11">
+            <summary>
+            Test overriding of OnEventGotoState from 2 base classes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M12">
+            <summary>
+            Test overriding of OnEventGotoState in a State sub class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M13">
+            <summary>
+            Test inheritance of OnEventPushState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M14">
+            <summary>
+            Test overriding OnEventPushState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M15">
+            <summary>
+            Test overriding OnEventPushState inherited from 2 subclasses.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M16">
+            <summary>
+            Test overriding OnEventPushState in a state subclass.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M17">
+            <summary>
+            This class tests that a state can inherit actions from an the class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.StateMachines.StateInheritanceTests.M18">
+            <summary>
+            This class tests that class level handler can cause transitions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.TimerTests.T3.Ping">
+            <summary>
+            Start the PingTimer and start handling the timeout events from it.
+            After handling 10 events, stop the timer and move to the Pong state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.Tests.TimerTests.T3.Pong">
+            <summary>
+            Start the PongTimer and start handling the timeout events from it.
+            After handling 10 events, stop the timer and move to the Ping state.
+            </summary>
+        </member>
+    </members>
+</doc>

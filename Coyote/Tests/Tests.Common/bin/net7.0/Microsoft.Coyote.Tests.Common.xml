@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Coyote.Tests.Common</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.Coyote.Tests.Common.BaseTest.SchedulingPolicy">
+            <summary>
+            Override to change the test scheduling policy used by the <see cref="T:Microsoft.Coyote.SystematicTesting.TestingEngine"/>.
+            By default this value is <see cref="F:Microsoft.Coyote.Runtime.SchedulingPolicy.None"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Events.MonitorUnitEvent">
+            <summary>
+            Basic event that contains no payload.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Tests.Common.Events.MonitorUnitEvent.Instance">
+            <summary>
+            Gets an instance of this event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.Events.MonitorUnitEvent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Tests.Common.Events.MonitorUnitEvent"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Events.UnitEvent">
+            <summary>
+            Basic event that contains no payload.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Coyote.Tests.Common.Events.UnitEvent.Instance">
+            <summary>
+            Gets an instance of this event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.Events.UnitEvent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Tests.Common.Events.UnitEvent"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.AsyncProvider">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.AsyncTask">
+            <summary>
+            A controlled task like type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.TaskProvider">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.GenericTaskProvider`2">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.ValueTaskProvider">
+            <summary>
+            Helper class for value task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.GenericValueTaskProvider`2">
+            <summary>
+            Helper class for value task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.UncontrolledTaskAwaiter">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.UncontrolledGenericTaskAwaiter">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.UncontrolledTaskAwaiter`1">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.UncontrolledValueTaskAwaiter">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.UncontrolledGenericValueTaskAwaiter">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.Tasks.UncontrolledValueTaskAwaiter`1">
+            <summary>
+            Helper class for task rewriting tests.
+            </summary>
+            <remarks>
+            We do not rewrite this class in purpose to test scenarios with partially rewritten code.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.TestOutputLogger">
+            <summary>
+            Logger that writes to the test output.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Tests.Common.TestOutputLogger.TestOutput">
+            <summary>
+            Underlying test output.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Tests.Common.TestOutputLogger.Log">
+            <summary>
+            Saves the log until the end of the test.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Tests.Common.TestOutputLogger.Lock">
+            <summary>
+            Synchronizes access to the string writer.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Tests.Common.TestOutputLogger.IsDisposed">
+            <summary>
+            True if this logger is disposed, else false.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.#ctor(Xunit.Abstractions.ITestOutputHelper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Tests.Common.TestOutputLogger"/> class.
+            </summary>
+            <param name="output">The test output helper.</param>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(System.String,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(System.String,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(System.String,System.Object,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(System.String,System.Object[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Write(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(System.String,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(System.String,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(System.String,System.Object,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(System.String,System.Object[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(Microsoft.Coyote.Logging.LogSeverity,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object,System.Object,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.WriteLine(Microsoft.Coyote.Logging.LogSeverity,System.String,System.Object[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.FlushLog">
+            <summary>
+            Write all buffered log to the test output logger.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.TestOutputLogger.Dispose">
+            <summary>
+            Releases any resources held by the logger.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.ConsoleOutputInterceptor">
+            <summary>
+            Intercepts all console output.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Tests.Common.ConsoleOutputInterceptor.ConsoleOutput">
+            <summary>
+            The original console output writer.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Tests.Common.ConsoleOutputInterceptor.Writer">
+            <summary>
+            Used to intercepts console output.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.ConsoleOutputInterceptor.#ctor(System.IO.MemoryStream)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Coyote.Tests.Common.ConsoleOutputInterceptor"/> struct.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Tests.Common.ConsoleOutputInterceptor.Dispose">
+            <summary>
+            Restores the original console color.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Tests.Common.StringExtensions">
+            <summary>
+            Provides methods for cleaning up test strings so they can be compared against expected results
+            after eliminating stuff that is unstable across test runs, test machines or OS platforms.
+            </summary>
+        </member>
+    </members>
+</doc>

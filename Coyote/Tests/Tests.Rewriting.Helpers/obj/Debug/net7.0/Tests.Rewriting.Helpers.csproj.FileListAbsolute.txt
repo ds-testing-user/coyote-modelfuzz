@@ -1,0 +1,14 @@
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/bin/net7.0/Microsoft.Coyote.Tests.Rewriting.Helpers.deps.json
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/bin/net7.0/Microsoft.Coyote.Tests.Rewriting.Helpers.dll
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/bin/net7.0/Microsoft.Coyote.Tests.Rewriting.Helpers.pdb
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/bin/net7.0/Microsoft.Coyote.Tests.Rewriting.Helpers.xml
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Tests.Rewriting.Helpers.csproj.AssemblyReference.cache
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Tests.Rewriting.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Tests.Rewriting.Helpers.AssemblyInfoInputs.cache
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Tests.Rewriting.Helpers.AssemblyInfo.cs
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Tests.Rewriting.Helpers.csproj.CoreCompileInputs.cache
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Microsoft.Coyote.Tests.Rewriting.Helpers.dll
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/refint/Microsoft.Coyote.Tests.Rewriting.Helpers.dll
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Microsoft.Coyote.Tests.Rewriting.Helpers.xml
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/Microsoft.Coyote.Tests.Rewriting.Helpers.pdb
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Tests/Tests.Rewriting.Helpers/obj/Debug/net7.0/ref/Microsoft.Coyote.Tests.Rewriting.Helpers.dll

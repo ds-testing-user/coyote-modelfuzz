@@ -1,0 +1,15 @@
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/net7.0/Microsoft.Coyote.Test.deps.json
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/net7.0/Microsoft.Coyote.Test.dll
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/net7.0/Microsoft.Coyote.Test.pdb
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/bin/net7.0/Microsoft.Coyote.Test.xml
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Test.csproj.AssemblyReference.cache
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Test.GeneratedMSBuildEditorConfig.editorconfig
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Test.AssemblyInfoInputs.cache
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Test.AssemblyInfo.cs
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Test.csproj.CoreCompileInputs.cache
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Test.csproj.CopyComplete
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Microsoft.Coyote.Test.dll
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/refint/Microsoft.Coyote.Test.dll
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Microsoft.Coyote.Test.xml
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/Microsoft.Coyote.Test.pdb
+/Users/berkay/Documents/Research/coyote-concurrency-testing/Coyote/Source/Test/obj/Debug/net7.0/ref/Microsoft.Coyote.Test.dll

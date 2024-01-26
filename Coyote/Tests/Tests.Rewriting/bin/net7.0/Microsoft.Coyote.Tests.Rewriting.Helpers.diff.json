@@ -1,0 +1,55 @@
+{
+  "FullName": "Microsoft.Coyote.Tests.Rewriting.Helpers, Version=1.7.3.0, Culture=neutral, PublicKeyToken=c4566cf0a7f74012",
+  "Modules": [
+    {
+      "Name": "Microsoft.Coyote.Tests.Rewriting.Helpers.dll",
+      "Types": [
+        {
+          "FullName": "Microsoft.Coyote.Rewriting.Tests.Helpers.TaskAwaiter",
+          "Methods": [
+            {
+              "Name": "GetAwaiter",
+              "FullName": "Microsoft.Coyote.Runtime.CompilerServices.TaskAwaiter Microsoft.Coyote.Rewriting.Tests.Helpers.TaskAwaiter::GetAwaiter()",
+              "Instructions": [
+                "[-] IL_0000: call System.Threading.Tasks.Task System.Threading.Tasks.Task::get_CompletedTask()",
+                "[+] IL_0000: call System.Threading.Tasks.Task Microsoft.Coyote.Rewriting.Types.Threading.Tasks.Task::get_CompletedTask()",
+                "[-] IL_0005: callvirt System.Runtime.CompilerServices.TaskAwaiter System.Threading.Tasks.Task::GetAwaiter()",
+                "[+] IL_0005: call Microsoft.Coyote.Runtime.CompilerServices.TaskAwaiter Microsoft.Coyote.Rewriting.Types.Threading.Tasks.Task::GetAwaiter(System.Threading.Tasks.Task)"
+              ]
+            }
+          ]
+        },
+        {
+          "FullName": "Microsoft.Coyote.Rewriting.Tests.Helpers.GenericTaskAwaiter",
+          "Methods": [
+            {
+              "Name": "GetAwaiter",
+              "FullName": "Microsoft.Coyote.Runtime.CompilerServices.TaskAwaiter`1<System.Int32> Microsoft.Coyote.Rewriting.Tests.Helpers.GenericTaskAwaiter::GetAwaiter()",
+              "Instructions": [
+                "[-] IL_0001: call System.Threading.Tasks.Task`1<!!0> System.Threading.Tasks.Task::FromResult<System.Int32>(!!0)",
+                "[+] IL_0001: call System.Threading.Tasks.Task`1<TResult> Microsoft.Coyote.Rewriting.Types.Threading.Tasks.Task::FromResult<System.Int32>(TResult)",
+                "[-] IL_0006: callvirt System.Runtime.CompilerServices.TaskAwaiter`1<!0> System.Threading.Tasks.Task`1<System.Int32>::GetAwaiter()",
+                "[+] IL_0006: call Microsoft.Coyote.Runtime.CompilerServices.TaskAwaiter`1<TResult> Microsoft.Coyote.Rewriting.Types.Threading.Tasks.Task`1<System.Int32>::GetAwaiter(System.Threading.Tasks.Task`1<TResult>)"
+              ]
+            }
+          ]
+        },
+        {
+          "FullName": "Microsoft.Coyote.Rewriting.Tests.Helpers.TaskAwaiter`1",
+          "Methods": [
+            {
+              "Name": "GetAwaiter",
+              "FullName": "Microsoft.Coyote.Runtime.CompilerServices.TaskAwaiter`1<T> Microsoft.Coyote.Rewriting.Tests.Helpers.TaskAwaiter`1::GetAwaiter()",
+              "Instructions": [
+                "[-] IL_0009: call System.Threading.Tasks.Task`1<!!0> System.Threading.Tasks.Task::FromResult<T>(!!0)",
+                "[+] IL_0009: call System.Threading.Tasks.Task`1<TResult> Microsoft.Coyote.Rewriting.Types.Threading.Tasks.Task::FromResult<T>(TResult)",
+                "[-] IL_000e: callvirt System.Runtime.CompilerServices.TaskAwaiter`1<!0> System.Threading.Tasks.Task`1<T>::GetAwaiter()",
+                "[+] IL_000e: call Microsoft.Coyote.Runtime.CompilerServices.TaskAwaiter`1<TResult> Microsoft.Coyote.Rewriting.Types.Threading.Tasks.Task`1<T>::GetAwaiter(System.Threading.Tasks.Task`1<TResult>)"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

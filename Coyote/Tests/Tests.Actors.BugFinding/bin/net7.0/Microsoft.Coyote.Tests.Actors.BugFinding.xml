@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Coyote.Tests.Actors.BugFinding</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.WildCardEventTests.W">
+            <summary>
+            Test that we can "do something specific for E1, but goto state for everything else".
+            In otherwords that WildCardEvent does not take precedence over a more specific
+            even typed action if defined on the same state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.WildCardEventTests.X">
+            <summary>
+            Test that wildcard can be overridden by push.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.WildCardEventTests.X2">
+            <summary>
+            Test that wildcard can override inherited action.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.WildCardEventTests.X3">
+            <summary>
+            Test that wildcard can override deferred event action using a pushed state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.WildCardEventTests.X4">
+            <summary>
+            Test that wildcard can override ignored event action using a pushed state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.ChainReplicationTests">
+             <summary>
+             A single-process implementation of the chain replication protocol.
+            
+             The chain replication protocol is described in the following paper:
+             http://www.cs.cornell.edu/home/rvr/papers/OSDI04.pdf
+            
+             This test contains a bug that leads to a safety assertion failure.
+             </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.ChordTests">
+             <summary>
+             A single-process implementation of the chord peer-to-peer look up service.
+            
+             The Chord protocol is described in the following paper:
+             https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf
+            
+             This test contains a bug that leads to a liveness assertion failure.
+             </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests">
+             <summary>
+             This is a simple implementation of the Raft consensus protocol
+             described in the following paper:
+            
+             https://raft.github.io/raft.pdf
+            
+             This test contains a bug that leads to duplicate leader election
+             in the same term.
+             </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server">
+            <summary>
+            A server in Raft can be one of the following three roles:
+            follower, candidate or leader.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.ConfigureEvent">
+            <summary>
+            Used to configure the server.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.VoteRequest">
+            <summary>
+            Initiated by candidates during elections.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.VoteResponse">
+            <summary>
+            Response to a vote request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.AppendEntriesRequest">
+            <summary>
+            Initiated by leaders to replicate log entries and
+            to provide a form of heartbeat.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.AppendEntriesResponse">
+            <summary>
+            Response to an append entries request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.ServerId">
+            <summary>
+            The id of this server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.ClusterManager">
+            <summary>
+            The cluster manager id.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.Servers">
+            <summary>
+            The servers.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.LeaderId">
+            <summary>
+            Leader id.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.ElectionTimer">
+            <summary>
+            The election timer of this server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.PeriodicTimer">
+            <summary>
+            The periodic timer of this server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.CurrentTerm">
+            <summary>
+            Latest term server has seen (initialized to 0 on
+            first boot, increases monotonically).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.VotedFor">
+            <summary>
+            Candidate id that received vote in current term (or null if none).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.Logs">
+            <summary>
+            Log entries.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.CommitIndex">
+            <summary>
+            Index of highest log entry known to be committed (initialized
+            to 0, increases monotonically).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.LastApplied">
+            <summary>
+            Index of the highest log entry applied (initialized to 0, increases monotonically).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.NextIndex">
+            <summary>
+            For each server, index of the next log entry to send to that
+            server (initialized to leader last log index + 1).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.MatchIndex">
+            <summary>
+            For each server, index of highest log entry known to be replicated
+            on server (initialized to 0, increases monotonically).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.VotesReceived">
+            <summary>
+            Number of received votes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.LastClientRequest">
+            <summary>
+            The latest client request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.Vote(Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.VoteRequest)">
+            <summary>
+            Processes the given vote request.
+            </summary>
+            <param name="request">VoteRequest.</param>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.AppendEntries(Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.AppendEntriesRequest)">
+            <summary>
+            Processes the given append entries request.
+            </summary>
+            <param name="request">AppendEntriesRequest.</param>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Server.GetLogTermForIndex(System.Int32)">
+            <summary>
+            Returns the log term for the given log index.
+            </summary>
+            <param name="logIndex">Index.</param>
+            <returns>Term.</returns>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Client.ConfigureEvent">
+            <summary>
+            Used to configure the client.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.RaftTests.Client.Request">
+            <summary>
+            Used for a client request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.ReplicatingStorageTests">
+             <summary>
+             This is a (much) simplified version of the replicating storage system described
+             in the following paper:
+            
+             https://www.usenix.org/system/files/conference/fast16/fast16-papers-deligiannis.pdf
+            
+             This test contains the liveness bug discussed in the above paper.
+             </summary>
+        </member>
+        <member name="M:Microsoft.Coyote.Actors.BugFinding.Tests.CurrentStateTests.TestCurrentState">
+            <summary>
+            Coyote semantics test: current state must be of the expected type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.PushStateTransitionTests.M7">
+            <summary>
+            Test that GotoState transitions are not inherited by PushState operations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.PushStateTransitionTests.M8">
+            <summary>
+            Test that PushState transitions are not inherited by PushState operations, and therefore
+            the event in question will cause the pushed state to pop before handling the event again.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.BasicTimerTests.M3.Ping">
+            <summary>
+            Start the PingTimer and start handling the timeout events from it.
+            After handling 10 events, stop the timer and move to the Pong state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Coyote.Actors.BugFinding.Tests.BasicTimerTests.M3.Pong">
+            <summary>
+            Start the PongTimer and start handling the timeout events from it.
+            After handling 10 events, stop the timer and move to the Ping state.
+            </summary>
+        </member>
+    </members>
+</doc>
